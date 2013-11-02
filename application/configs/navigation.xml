@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+        <label>Home</label>
+        <controller>index</controller>
+        <action>index</action>
+        <pages>
+            <about>
+                <label>About</label>
+                <controller>index</controller>
+                <action>about</action>
+            </about>
+            <contact>
+                <label>Contact</label>
+                <controller>index</controller>
+                <action>contact</action>
+            </contact>
+            <work>
+                <label>Work</label>
+                <controller>Work</controller>
+                <action>index</action>
+                <pages>
+                    <publication>
+                        <label>Publication</label>
+                        <controller>Work</controller>
+                        <action>publication</action>
+                    </publication>
+                    <thesis>
+                        <label>Thesis</label>
+                        <controller>Work</controller>
+                        <action>thesis</action>
+                    </thesis>
+                    <metavisualizer>
+                        <label>Meta visualizer</label>
+                        <controller>Work</controller>
+                        <action>metavisualizer</action>
+                    </metavisualizer>
+                    <autochef>
+                        <label>Autochef</label>
+                        <controller>Work</controller>
+                        <action>autochef</action>
+                    </autochef>
+                    <herbalclinic>
+                        <label>Herbal clinic</label>
+                        <controller>Work</controller>
+                        <action>herbalclinic</action>
+                    </herbalclinic>
+                </pages>
+            </work>
+        </pages>
+    </nav>
+    
+</configdata>

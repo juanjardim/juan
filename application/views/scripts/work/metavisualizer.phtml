@@ -1,0 +1,128 @@
+<script>
+    $(document).ready(function() {
+        $("#navigationBar li").removeClass("active");
+        $("#navWork").addClass("active");
+    });
+</script>
+
+<section id="metav" style="margin-top: 100px;">
+    <div class="page-header">
+        <h1>Meta Visualizer</h1>
+    </div>
+    <div class="row">
+        <div class="span12 text-justify">
+            <h3>Project Description</h3>
+            <p>
+                In the preparation of the Master thesis was proposed developed a tool for models visualization suport. With this tool the user can load models, perform queries in the models and view the result of queries.
+            </p>
+            <p>
+                In terms of architecture was followed three architectural styles:
+            </p>
+
+            <ul>
+                <li>
+                    <a href="http://en.wikipedia.org/wiki/Model_View_ViewModel">Model-View-ViewModel</a>: <p>is an architectural pattern used in software engineering that originated from Microsoft as a specialization of the Presentation Model design pattern introduced by Martin Fowler.</p>
+                </li>
+
+                <li>
+                    <a href="http://eaipatterns.com/PipesAndFilters.html"> Pipes and Filter</a>: <p>this style is used to divide a larger processing task into a sequence of smaller, independent processing steps (Filters) that are connected by channels (Pipes)</p>
+                </li>
+
+                <li>
+                    <a href="http://msdn.microsoft.com/en-us/library/ff648205.aspx"> Plugin</a>: <p>the Plug-in pattern is a software pattern that creates an object instance of an interface at run time. The Plug-in pattern extends the behavior of an existing class so that it can be used for a more specific purpose. It differs from using class inheritance, where behavior is altered or overwritten, or configuration, where behavior modification is limited to the capabilities of the defined configuration options.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Due the use of the architectural styles previously mentioned, this tool can be extended at any time with news features. At the moment the tool has four plugins component:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        Charts: this component allows the user to use different types of charts to view the results of the queries.
+                </li>
+
+                <li>
+                    <p>
+                        Graph: this component allows the user to use graph view to visualize the relations between the returned objects of the query.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Heat Map: this component allows the user to use graph view to visualize the relations between the returned objects of the query.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        OCL: this component allows the user to perform queries in <a href="http://en.wikipedia.org/wiki/Object_Constraint_Language">OCL </a>
+                    </p>
+                </li>
+            </ul>
+            <h2>Technologies Used</h2>
+            <p>
+                The project was developed in C# using <a href="http://windowsclient.net/wpf/" target="_blank">WPF</a>. 
+            </p>
+        </div>
+    </div>
+    <section>
+        <div id="autochefCarousel" class="carousel slide  thumbnail span8 offset2">
+            <ol class="carousel-indicators">
+                <li data-target="#autochefCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#autochefCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#autochefCarousel" data-slide-to="2" class=""></li>
+                <li data-target="#autochefCarousel" data-slide-to="3" class=""></li>
+                <li data-target="#autochefCarousel" data-slide-to="4" class=""></li>
+                <li data-target="#autochefCarousel" data-slide-to="5" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/images/Visualizer1.jpg">
+                        <div class="carousel-caption">
+                            <h4>Main view</h4>
+                            <p>In this view it's possible create a new project and open existent projects.</p>
+                        </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Visualizer6.jpg">
+                        <div class="carousel-caption">
+                            <h4>File Menu</h4>
+                        </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Visualizer2.jpg">
+                        <div class="carousel-caption">
+                            <h4>Designer View</h4>
+                            <p>In this view the user can drag and drop components and connect the component ports.</p>
+                        </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Visualizer3.jpg">
+                        <div class="carousel-caption">
+                            <h4>Queries Made in OCL</h4>
+                            <p>In this view the user can perform queries in OCL.</p>
+                        </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Visualizer4.jpg">
+                        <div class="carousel-caption">
+                            <h4>View the result in a Graph</h4>
+                            <p>In this view the user can visualize the result of the query in OCL in a graph.</p>
+                        </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Visualizer5.jpg">
+                        <div class="carousel-caption">
+                            <h4>View the result in a Chart</h4>
+                            <p>In this view the user can visualize the result of the query in OCL in a chart.</p>
+                        </div>
+                </div>
+
+            </div>
+            <a class="left carousel-control" href="#autochefCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#autochefCarousel" data-slide="next">›</a>
+        </div>
+    </section>
+
+</section>

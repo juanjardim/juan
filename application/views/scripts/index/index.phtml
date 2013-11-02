@@ -1,0 +1,60 @@
+<script>
+    $(document).ready(function() {
+        $("#navigationBar li").removeClass("active");
+        $("#navHome").addClass("active");
+    });
+</script>
+<section id="index" style="margin-top: 100px;">
+    <div class="page-header">
+        <h1>Welcome to Juan's website</h1>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <p>
+                Juan Manuel Jardim Mendes has a master degree in <a href="http://en.wikipedia.org/wiki/Informatics_Engineering" target="_blank">Informatics Engineering </a> from <a href="http://www.uma.pt" target="_blank">University of Madeira</a>. His thesis was about "The other side of the models: visualization techniques for exploring models". 
+                He also has a short paper publication in <a href="http://inforum.org.pt/INForum2011" target="_blank">INForum 2011</a> about this topic.&nbsp;
+                This website will provide content about his work and research.
+            </p>
+        </div>
+    </div>
+    <section>
+        <div id="mainCarousel" class="carousel slide  thumbnail span8 offset2">
+            <ol class="carousel-indicators">
+                <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mainCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#mainCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="/work/metavisualizer">
+                        <img src="/images/Visualizer1.jpg" alt="Meta Visualizer">
+                            <div class="carousel-caption">
+                                <h4>Meta Visualizer</h4>
+                                <p>Thesis prototype</p>
+                            </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/work/autochef">
+                        <img src="/images/AutoChef.jpg" alt="AutoChef">
+                            <div class="carousel-caption">
+                                <h4>Auto Chef</h4>
+                                <p>Human interaction prototype</p>
+                            </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/work/herbalclinic">
+                        <img src="/images/HC1.jpg" alt="Herbal Clinic">
+                            <div class="carousel-caption">
+                                <h4>Herbal Clinic</h4>
+                                <p>DBMS prototype</p>
+                            </div>
+                    </a>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#mainCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#mainCarousel" data-slide="next">›</a>
+        </div>
+    </section>
+</section>
