@@ -21,3 +21,81 @@
 .container .credit {
     margin: 20px 0;
 }
+
+.tweet {
+    margin: 0;
+    padding: 0;
+    margin-top: -15px;
+}
+
+.tweet li {
+    list-style: none;
+    padding: 5px 0;
+    margin: 10px auto;
+    font-size: 12px;
+}
+.tweet li.in img.avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.tweet li img.avatar {
+    height: 45px;
+    width: 45px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.tweet li.in .message {
+    text-align: left;
+    border-left: 2px solid #35aa47;
+    margin-left: 65px;
+    background: #fafafa;
+}
+.tweet li.out img.avatar {
+  float: right;
+  margin-left: 10px;
+}
+
+.tweet li .name {
+    color: #3590c1;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+.tweet li.out .message {
+  border-right: 2px solid #da4a38;
+  margin-right: 65px;
+  background: #fafafa;
+  text-align: right;
+}
+
+.tweet li.out .name, 
+.tweet li.out .datetime  {  
+  text-align: right;
+  margin-right: 3px;
+}
+
+.tweet li .datetime {
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+}
+.tweet li .message .body {
+    display: block;
+    margin-left: 3px;
+}
+
+.tweetContainer{
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.scroller {
+    padding: 0px;
+    margin: 0px;
+    padding-right: 12px;
+    overflow: hidden;
+}
