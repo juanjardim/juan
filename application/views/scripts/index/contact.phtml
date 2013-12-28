@@ -1,25 +1,76 @@
-<script>
-    $(document).ready(function() {
-        $("#navigationBar li").removeClass("active");
-        $("#navContact").addClass("active");
-    });
-</script>
-<section id="contact" style="margin-top: 100px;">
-    <div class="page-header">
-        <h1>Contact</h1>
-    </div>
-    <div class="row">
-        <div class="span12">
-            <p>
-                <a href="mailto:juanjardim@gmail.com">
-                    <img src="/images/gmail_16.png"  alt="My Email">
-                </a>
-                juanjardim(at)gmail.com
-            </p>
-            <p>
-                <img src="/images/skype_16.png"  alt="My Skype alias">
-                juan-jardim
-            </p>
+<div class="row breadcrumbs margin-bottom-40 no-side-margin no-side-padding">
+    <div class="container">
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <h1>Contact</h1>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="/index">Home</a></li>
+                <li class="active">Contact</li>
+            </ul>
         </div>
     </div>
-</section>
+</div>
+<div class="container min-hight">
+    <div class="row no-side-margin no-side-padding">
+        <div class="col-md-9 col-sm-9">
+            <h3>Contact Form</h3>
+            <?php if(!$this->isPost) { ?>
+            <form action="#" class="horizontal-form margin-bottom-40" role="form" method="post">
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control" name="name" id="name"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email <span class="color-red">*</span></label>
+                    <div class="col-lg-12">
+                        <input type="email" name="email" required placeholder="Enter a valid email address" class="form-control" id="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Message</label>
+                    <div class="col-lg-12">
+                        <textarea class="form-control" rows="8" id="message"  name="message"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12" style="margin-top: 15px;">
+                   <button type="submit" class="btn btn-default">Send</button>
+               </div>
+           </form>
+           <?php } else if($this->isPostOk){ ?>
+           <p> Message was sent with success. Thank you. </p>
+
+           <?php   } else{ ?>
+           <p> There was an error sending the message. Please, try later. </p>
+
+           <?php echo $this->error; } ?>        
+       </div>
+       <div class="col-md-3 col-sm-3 col-xs-12">
+       <div class="col-md-12 col-sm-12 col-xs-6">
+            <address>
+                <strong>Email</strong><br>
+                <a href="mailto:#">juanjardim@gmail.com</a><br>
+            </address>
+            <ul class="social-icons" style="margin-bottom: 15px;">
+                <li><a href="https://www.facebook.com/JuanManuelJardimMendes" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://plus.google.com/+JuanManuelJardimMendes" target="_blank" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="http://pt.linkedin.com/pub/juan-manuel-jardim-mendes/3b/591/29b" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-6">
+            <address>
+                <strong>Curriculum Vitae</strong>
+            </address>
+            <div class="col-md-3 col-xs-12">
+             <div class="well" style="width: 120px; padding: 0px;">
+                <a href="/pdf/CV_EN_062013.pdf" target="_blank">
+                    <img src="/images/CV.jpg" alt="Juan Jardim - CV">
+                </a>
+            </div>
+        </div>         
+    </div>
+</div>
+</div>
+</div>

@@ -2,7 +2,7 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
-    protected function _initNavigation() {
+    /*protected function _initNavigation() {
         $this->bootstrap('layout');
         $layout = $this->getResource('layout');
         $view = $layout->getView();
@@ -10,7 +10,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
         $navigation = new Zend_Navigation($config);
         $view->navigation($navigation);
-    }
+    }*/
 
 }
 

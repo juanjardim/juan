@@ -1,89 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title> Juan Jardim </title>
-        <meta name="keywords" content="Juan Jardim, computer science, software, web development, Juan Manuel Jardim Mendes" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This is my web site">
-        <meta name="author" content="Juan Manuel Jardim Mendes">
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="/css/style.css" rel="stylesheet">
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/jquery.slimscroll.min.js"></script>
-    </head>
-    <body class="preview">
-
-        <div id="wrap">
-            <div class="navbar navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container" >
-                        <a class="brand" href="/index">Juan Jardim</a>
-                        <div class="nav-collapse">
-                            <ul class="nav" id="navigationBar">
-                                <li id="navHome" ><a href="/index">Home</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Work <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/work">Publications and Thesis</a></li>
-                                        <li><a href="/work/metavisualizer">Meta Visualizer</a></li>
-                                        <li><a href="/work/autochef">Auto Chef</a></li>  
-                                        <li><a href="/work/herbalclinic">Herbal Clinic</a></li> 
-                                        <li><a href="/work/node">Node.js</a></li> 
-                                    </ul>
-                                </li>
-                                <li id="navAbout"><a href="/index/about">About</a></li>
-                                <li id="navContact"><a href="/index/contact">Contact</a></li>
-                            </ul>
-                            <ul class="nav pull-right">
-                                <li class="divider-vertical"></li>
-                                <li style="height: 32px;">
-                                    <a href="http://pt.linkedin.com/pub/juan-manuel-jardim-mendes/3b/591/29b">
-                                        <img style="margin-top: -7px;" src="/images/linkedin.png" alt="LinkedIn" />
-                                    </a>
-                                </li>
-                                <li style="height: 32px;">
-                                    <a href="https://www.facebook.com/JuanManuelJardimMendes">
-                                        <img style="margin-top: -7px;" src="/images/facebook.png" alt="Facebook" />
-                                    </a>
-                                </li>
-                                <li style="height: 32px;">
-                                    <a href="https://plus.google.com/101213346722883639390">
-                                        <img style="margin-top: -7px;" src="/images/google.png" alt="Google Plus" />
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<head>
+    <meta charset="utf-8">
+    <title>Juan Jardim - Web Developer </title>
+    <meta name="keywords" content="Juan Jardim, Web Developer computer science, software,  Juan Manuel Jardim Mendes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Manuel Jardim Mendes">
+    <meta name="description" content="Hi, I'm a Web Developer working at Zon Madeira, which is one of the best companies in telecommunications in Portugal. Here, I've been learning and developing, for almost two years, Responsive Web applications and also giving support to the backend area.">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/style.css">        
+    <link rel="stylesheet" href="/jquery.bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <meta property="fb:admins" content="250479071724249"/>    
+</head>
+<body>
+    <div class="header navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index">Juan Jardim</a>
             </div>
-            <div class="container">
-                <?php echo $this->layout()->content ?>
-            </div>
-            <div id="push"></div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="<?php echo $this->indexClass;?>">
+                       <a href="/index">Home</a>
+                   </li>
+                   <li class="<?php echo $this->portfolioClass;?>">
+                       <a href="/index/portfolio">Portfolio</a>
+                   </li>
+                   <li class="<?php echo $this->contactClass;?>">
+                       <a href="/index/contact">Contact</a>
+                   </li>
 
+               </ul>                         
+           </div>
+       </div>
+   </div>
+   <div class="page-container">
+       <?php echo $this->layout()->content ?>
+   </div>
+   <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <p><span class="margin-right-10">2013 © Juan Jardim. All Rights Reserved.</span></p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <ul class="social-footer">
+                    <li><a href="https://www.facebook.com/JuanManuelJardimMendes" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://plus.google.com/+JuanManuelJardimMendes" rel="author" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="http://pt.linkedin.com/pub/juan-manuel-jardim-mendes/3b/591/29b" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#" title="juan-jardim"><i class="fa fa-skype"></i></a></li>
+                </ul>       
+            </div>
         </div>
-        <footer id="footer" class="navbar navbar-fixed-bottom">
-            <div class="container">
-                <div class="pull-left" >
-                    <a href="http://validator.w3.org/check?uri=referer" class="html5">
-                        <img src="/images/html5.png" alt="HTML5">
-                    </a>
-                </div>
-                <p class="pull-right"><a href="#">Back to top</a></p>
-            </div>
-        </footer>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-42383248-1', 'juanjardim.com');
-            ga('send', 'pageview');
-
-        </script>
-    </body>
+    </div>
+</div>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/jquery.slimscroll.min.js"></script>
+<script src="/jquery.bxslider/jquery.bxslider.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
 </html>
