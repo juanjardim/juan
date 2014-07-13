@@ -5,18 +5,21 @@
     <title>Juan Jardim - Web Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Juan Manuel Jardim Mendes">
+    <meta name="developer" content="Juan Manuel Jardim Mendes">
+    <meta name="design" content="Juan Manuel Jardim Mendes">
+    <meta name="copyright" content="Juan Manuel Jardim Mendes">
     <meta name="keywords" content="Juan Jardim, Web Developer, Computer science, software,  Juan Manuel Jardim Mendes"/>
     <meta name="description" content="Hi, I'm a Web Developer working at NOS Madeira, which is one of the best companies in telecommunications in Portugal. Here, I've been learning and developing, for two years, Responsive Web applications and also giving support to the backend area.">    <meta property="og:title" content="Juan Jardim - Web Developer">
     <meta property="og:description" content="Hi, I'm a Web Developer working at NOS Madeira, which is one of the best companies in telecommunications in Portugal. Here, I've been learning and developing, for two years, Responsive Web applications and also giving support to the backend area.">
     <meta property="og:site_name" content="Juan Jardim">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="/assets/style.css">
+
     <link rel="stylesheet" href="/third-party/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/third-party/bootstrap/css/lumen.css">
-    <link rel="stylesheet" href="/third-party/bootstrap/css/timeline.css">
     <link rel="stylesheet" href="/third-party/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/third-party/animate/animate.css">
-    <link rel="stylesheet" href="/third-party/bootstrapvalidator/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+
+
 </head>
 <body>
 <header>
@@ -30,24 +33,15 @@
                 </button>
                 <a class="navbar-brand" href="#">Juan Jardim</a>
             </div>
-            <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#journey">Journey</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#testimunials">Testimonials</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                </ul>
-            </div>
         </div>
+
     </div>
 </header>
+
 <div class="page-container">
     <?php echo $this->layout()->content; ?>
 </div>
-</div>
-<footer>
+<footer class="navbar-fixed-bottom">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
@@ -58,26 +52,6 @@
 </footer>
 <script src="/third-party/jquery.js"></script>
 <script src="/third-party/bootstrap/js/bootstrap.min.js"></script>
-<script src="/third-party/One-Page-Nav.js"></script>
-<script src="/third-party/bootstrapvalidator/bootstrapvalidator.min.js"></script>
-<script src="/third-party/wow/wow.min.js"></script>
 <script src="/assets/main.js"></script>
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-42383248-1', 'juanjardim.com');
-    ga('send', 'pageview');
-
-</script>
 </body>
 </html>
