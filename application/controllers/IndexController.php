@@ -4,66 +4,59 @@ class IndexController extends Zend_Controller_Action
 {
 
     public function init()    {
-        /* Initialize action controller here */
     }
 
     public function indexAction()    {
-       $this->view->indexClass = "active";
-       $this->view->contactClass = "";
-       $this->view->portfolioClass = "";
-   }
 
-   /* public function aboutAction()
-    {
-        // action body
-    }*/
+ }
+
 
     public function contactAction() {
-        $this->view->indexClass = "";
-        $this->view->contactClass = "active";
-        $this->view->portfolioClass = "";
-
         $this->view->isPost = $this->getRequest()->isPost();
         $this->view->isPostOk = true;
-        if (!$this->getRequest()->isPost()) 
-            return;
+        if (!$this->getRequest()->isPost())
+            $this->_helper->redirector->setCode(404);
+
+        $this->_helper->layout->setLayout('contact-layout');
 
         $data = $this->getRequest()->getPost();
 
-        $name = $data['name'];
+        $firstname = $data['firstname'];
+        $lastname = $data['lastname'];
+        $name = $firstname .  " " . $lastname;
         $email = $data['email'];
         $message = $data['message'];
-
-        $config = array('port' => '25',
-            'ssl' => 'tls', 
-            'auth' => 'login', 
-            'username' => 'juanjardim@gmail.com', 
-            'password' => 'marinaxp1987');
-        $transport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
-
-        $mail = new Zend_Mail('utf-8');
-        $mail->addTo("juanjardim@gmail.com");
-        $mail->addCc($email);
-        $mail->setSubject('Contact Submition');
-        $mail->setFrom('juanjardim@gmail.com', 'Juan Jardim');
-        
-        $mail->setBodyHtml($message);
         try {
-            $mail->send($transport);
+            $headers    = array
+            (
+                'MIME-Version: 1.0',
+                'Content-Type: text/html; charset="UTF-8";',
+                'Content-Transfer-Encoding: 7bit',
+                'Date: ' . date('r', $_SERVER['REQUEST_TIME']),
+                'Message-ID: <' . $_SERVER['REQUEST_TIME'] . md5($_SERVER['REQUEST_TIME']) . '@' . $_SERVER['SERVER_NAME'] . '>',
+                'From: ' . $email,
+                'Reply-To: ' .  $email,
+                'Return-Path: ' .  $email,
+                'Cc:'.$email,
+                'X-Mailer: PHP/' . phpversion(),
+                'X-Originating-IP: ' . $_SERVER['SERVER_ADDR'],
+                );
+
+
+            mail('juanjardim@gmail.com', '=?UTF-8?B?' . base64_encode("You have got a message from: $name") . '?=', $message, implode("\n", $headers));
+
         } catch (Exception $e) {
             $this->view->isPostOk = false;
             $this->view->error = $e;
             return;
         }
 
+
     }
 
 
     public function portfolioAction(){
-        $this->view->indexClass = "";
-        $this->view->contactClass = "";
-        $this->view->portfolioClass = "active";
-
+        $this->_helper->layout->setLayout('portfolio-layout');
     }
 
 }
